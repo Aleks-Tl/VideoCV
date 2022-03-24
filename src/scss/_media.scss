@@ -511,7 +511,7 @@
   //     font-size: 30px;
   //   }
   // }
-  .right-trusting__btn{
+  .right-trusting__btn {
     display: block;
     margin-right: auto;
     max-width: 240px;
@@ -820,7 +820,7 @@
       bottom: 0;
       flex-direction: column;
       left: 50%;
-      transform: translateX(-50%) translateY(-950%);
+      transform: translateX(-50%) translateY(100%);
       width: 100%;
       padding-top: 15px;
       padding-bottom: 15px;
@@ -1050,7 +1050,6 @@
 //   }
 // }
 
-
 @media (max-height: 476px) {
   .header {
     .nav-menu {
@@ -1066,7 +1065,7 @@
       }
     }
   }
-  .header .nav-menu > ul.transformation li a{
+  .header .nav-menu > ul.transformation li a {
     font-size: 18px;
     padding: 2.5px 0;
   }
