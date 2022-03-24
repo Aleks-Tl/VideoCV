@@ -1,0 +1,24 @@
+// base
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// components
+@import "./components/header";
+@import "./components/promo";
+@import "./components/trusting";
+@import "./components/calculator";
+@import "./components/quality";
+@import "./components/video";
+@import "./components/ready-light";
+@import "./components/map";
+@import "./components/testimonials";
+@import "./components/ready";
+@import "./components/price";
+@import "./components/footer";
+@import "./components/styles";
+
+//media
+
+@import "media";

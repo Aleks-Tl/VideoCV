@@ -1,0 +1,50 @@
+.ready {
+  padding-top: 100px;
+  padding-bottom: 110px;
+  background-image: url("../img/bg-ready.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--colorWhite);
+    margin: 0 auto;
+  }
+
+  &__left {
+    margin-right: 42px;
+  }
+
+  &__suptitle {
+  }
+
+  &__title {
+    line-height: 44px;
+    margin-top: 8px;
+  }
+
+  &__right {
+  }
+
+  &__btns {
+    button {
+      &:nth-of-type(1) {
+        &:hover {
+          color: var(--colorWhite);
+        }
+      }
+      &:nth-of-type(2) {
+        color: var(--colorWhite);
+        &:hover {
+          color: var(--colorMain);
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin-left: 32px;
+  }
+}

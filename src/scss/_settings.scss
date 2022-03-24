@@ -1,0 +1,239 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+  color: var(--colorMain);
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.btn-outline {
+  padding: 8px 25px;
+  border: 1px solid #14efb5;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--colorMain);
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: var(--colorGreen);
+  }
+  @media (max-width: 768px) {
+    padding: 6px 20px;
+    font-size: 14px;
+  }
+}
+
+.btn {
+  padding: 8px 25px;
+  border: 1px solid #14efb5;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--colorMain);
+  transition: all 0.3s ease 0s;
+  background-color: var(--colorGreen);
+  &:hover {
+    background-color: transparent;
+  }
+  @media (max-width: 768px) {
+    padding: 6px 20px;
+    font-size: 14px;
+  }
+}
+
+.title {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 53px;
+  letter-spacing: 0.5px;
+  @media (max-width: 1200px) {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  @media (max-width: 992px) {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  @media (max-width: 576px) {
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.scroll-down {
+  position: relative;
+  z-index: 10;
+  .container {
+    position: relative;
+  }
+  position: absolute;
+  right: 7px;
+  bottom: 35px;
+  span {
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--colorMain);
+    position: absolute;
+    bottom: 90px;
+    transform: rotate(-90deg);
+    left: -40px;
+    display: block;
+    width: 100px;
+  }
+  img {
+    z-index: 100;
+  }
+}
+.price {
+  .scroll-down {
+    @media (max-width: 400px) {
+      right: 3px;
+    }
+  }
+}
+.case {
+  .scroll-down {
+    @media (max-width: 400px) {
+      right: 3px;
+    }
+  }
+}
+
+.cookies {
+  padding-top: 17px;
+  padding-bottom: 14px;
+  background-color: var(--colorMain);
+  position: relative;
+  z-index: 200;
+  color: var(--colorWhite);
+  transition: all 0.3s ease 0s;
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    line-height: 26px;
+    @media (max-width: 768px) {
+      font-size: 13px;
+      line-height: 18px;
+    }
+    @media (max-width: 576px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    &:nth-child(1) {
+      color: var(--colorWhite);
+      margin-left: 100px;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: var(--colorGreen);
+      }
+    }
+    &:nth-child(2) {
+      margin-left: 30px;
+      &:hover {
+        color: var(--colorWhite);
+      }
+    }
+    @media (max-width: 768px) {
+      &:nth-child(1) {
+        margin-left: 30px;
+        margin-bottom: 10px;
+      }
+      &:nth-child(2) {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+    }
+  }
+}

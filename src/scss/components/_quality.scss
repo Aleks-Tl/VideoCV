@@ -1,0 +1,100 @@
+.quality {
+  background-color: #422670;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: var(--colorWhite);
+  &__wrap {
+    max-width: 1187px;
+    margin: 0 auto;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 24px 32px;
+    border: 1px solid var(--colorWhite);
+    // border-radius: 8px;
+    width: 345px;
+    cursor: pointer;
+    // transition: all 0.3s ease 0s;
+
+    &:hover,
+    &.active {
+      color: var(--colorGreen);
+      border: 1px solid var(--colorGreen);
+      border-image: linear-gradient(
+        to left bottom,
+        var(--colorGreen) 10%,
+        var(--colorGreen) 30%,
+        var(--colorGreen) 60%,
+        #155242 80%
+      );
+      border-image-slice: 1;
+      // transition: all 5s ease 0s;
+    }
+  }
+
+  &__supname {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &__name {
+    font-family: "Gotham";
+    font-size: 48px;
+    line-height: 53px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+  }
+
+  &__content {
+    margin-top: 56px;
+  }
+}
+
+.content-quality {
+  display: none;
+  &.active{
+    display: flex;
+  }
+  justify-content: space-between;
+  &__left {
+    max-width: 555px;
+    margin-right: 100px;
+    line-height: 26px;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__right {
+    blockquote {
+      font-family: "Poppins";
+      line-height: 26px;
+      margin: 0;
+      padding-left: 105px;
+      background-image: url("../img/avatar.png");
+      background-position: left top;
+      background-size: 65px 65px;
+      background-repeat: no-repeat;
+      span {
+        font-family: "Gotham";
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: var(--colorGreen);
+      }
+    }
+  }
+
+  &__name {
+    padding-left: 105px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-top: 20px;
+  }
+}

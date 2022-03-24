@@ -1,0 +1,82 @@
+.ready-light {
+  padding-top: 45px;
+  padding-bottom: 60px;
+  background-image: url("../img/bg-ready-light.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--colorWhite);
+    max-width: 1187px;
+    margin: 0 auto;
+  }
+
+  &__left {
+  }
+
+  &__suptitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &__title {
+    margin-top: 8px;
+    font-size: 48px;
+    line-height: 53px;
+    letter-spacing: 0.5px;
+  }
+
+  &__right {
+    padding-left: 105px;
+    background-image: url("../img/avatar.png");
+    background-size: 65px 65px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    blockquote {
+      margin: 0;
+      font-size: 16px;
+      line-height: 26px;
+      max-width: 350px;
+      span {
+        font-family: "Gotham";
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    margin-top: 17px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+  }
+
+  &__btns {
+    margin-top: 25px;
+    button {
+      &:nth-of-type(1) {
+        margin-right: 32px;
+        &:hover {
+          color: var(--colorWhite);
+        }
+      }
+      &:nth-of-type(2) {
+        color: var(--colorWhite);
+        &:hover {
+          color: var(--colorMain);
+        }
+      }
+    }
+  }
+
+  &__btn {
+  }
+}

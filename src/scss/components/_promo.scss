@@ -1,0 +1,52 @@
+.promo {
+  position: relative;
+  padding-top: 140px;
+  background-blend-mode: multiply;
+  background: linear-gradient(to right bottom, #fff 70%, rgb(#14efb5, 0.2) 100%);
+
+  overflow: hidden;
+  .container {
+    padding-bottom: 185px;
+  }
+  //background-color: rgba(255, 255, 255, 1);
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__descr {
+    flex: 0 1 40%;
+  }
+
+  &__suptitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &__title {
+    margin-top: 8px;
+  }
+
+  &__text {
+    line-height: 26px;
+    margin-top: 30px;
+  }
+
+  &__buttons {
+    margin-top: 30px;
+  }
+
+  &__btn {
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+
+  &__img {
+    flex: 0 1 60;
+    img {
+      transform: translateX(21px);
+    }
+  }
+}
