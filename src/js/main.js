@@ -3,7 +3,6 @@ import vars from './_vars';
 import './_functions';
 import './_components';
 
-
 const burger = document.querySelector('.burger'),
   menu = document.querySelector('.nav-menu').firstElementChild,
   pageBody = document.querySelector('.page__body'),
