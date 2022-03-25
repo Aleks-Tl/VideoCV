@@ -270,3 +270,11 @@
     transition: all 0.3s ease 0s;
   }
 }
+
+
+@-moz-document url-prefix() { 
+  .item-price {
+    position: relative;
+
+  }
+}
