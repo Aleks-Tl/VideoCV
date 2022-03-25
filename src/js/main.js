@@ -81,8 +81,8 @@ const numberInput = document.querySelector('input[type="number"]');
 const rangeVal = document.getElementById('rangevalue');
 
 const rangeInput = document.querySelector('.range_container input');
-if(rangeInput){
-  let  rangeInputValue = +rangeInput.value;
+if (rangeInput) {
+  let rangeInputValue = +rangeInput.value;
   rangeVal.style.left = (rangeInputValue - 5) + '%';
 }
 
@@ -106,9 +106,9 @@ function handleInputChange(e) {
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
 }
 
-  rangeInputs.forEach(input => {
-    input.addEventListener('input', handleInputChange);
-  });
+rangeInputs.forEach(input => {
+  input.addEventListener('input', handleInputChange);
+});
 
 
 //numberInput.addEventListener('input', handleInputChange);
@@ -151,7 +151,7 @@ function Tabs() {
 
   let change = function (e) {
     clear();
-    if (e.target.classList.contains('quality__item')) {
+    if (e.target.classList.contains('quality__item') || e.target.classList.contains('tabs__item')) {
       e.target.classList.add('active');
     } else {
       e.target.parentNode.classList.add('active');
@@ -200,7 +200,7 @@ if (switchInput.checked) {
 }
  */
 mobileTabs();
-if (trustingTitle){
+if (trustingTitle) {
   trustingContentMove();
 }
 
@@ -208,8 +208,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   scrollFunction();
 });
 window.addEventListener("resize", function (event) {
-  
-  if (trustingTitle){
+
+  if (trustingTitle) {
     trustingContentMove();
   }
   mobileTabs();

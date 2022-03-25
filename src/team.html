@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="header">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <!-- Section How it all started -->
+    <section class="team">
+      <div class="container">
+        <a href="#footer" class="scroll-down"><span>Scroll down</span><img src="img/scroll-down.png" alt=""></a>
+        <div class="team__title title">How it all started</div>
+        <div class="team__wrap">
+          <div class="team__textleft">
+            <p>Kristian Kalle started VideoCV with an idea to simplify the way we build our teams.
+              The idea came to the young entrepreneur’s mind when he was working on one of his previous
+              business endeavours. Looking for employees, he realised that paper-back CVs and cover
+              letters hardly give anything away about who the person really is.
+              It’s been decades since written CVs and cover letters became a thing.</p>
+
+            <p>Let’s illustrate this a bit.
+              When we get home after a long day at work, we don’t watch movies from VCRs anymore. We
+              don’t even get up and turn the knob to turn on the moving picture. There’s a remote for that.
+              Even the toothbrushes are electric now.
+              If we can move on elsewhere, why should we use outdated tools in our businesses?
+            </p>
+          </div>
+          <div class="team__textright">
+            <p>That’s what Kristian thought, too. So, together with the current Head of Sales, Hans Kristjan
+              Velling, and the CTO, Mathias Liias, he started a journey towards taking the next step in the
+              recruitment world.
+              Enter VideoCV. A platform where candidates don’t get lost in piles of paper and recruiters see
+              the person behind the name from the get-go.</p>
+
+            <p>Operating in European and African markets,
+              VideoCV helps to save time and money for businesses big and small.
+              Hire a person, not paper. </p>
+            <button class="team__btn btn btn-reset">Contact us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Our amazing team -->
+    <section class="teamtabs">
+      <div class="container">
+        <div class="teamtabs__suptitle">Well hello there</div>
+        <div class="teamtabs__title title">Our amazing team</div>
+        <div class="tabs__wrap">
+          <div class="tabs__items">
+            <div class="tabs__item active" data-tab="0">All</div>
+            <div class="tabs__item" data-tab="1">Business</div>
+            <div class="tabs__item" data-tab="2">Sales</div>
+            <div class="tabs__item" data-tab="3">Development</div>
+          </div>
+
+          <div class="tabs__content active content-tabs" id="0">
+            <div class="content-tabs__items">
+              <div class="content-tabs__item">
+                <div class="content-tabs__img">
+                  <img src="img/team.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">CEO & founder</div>
+                <div class="content-tabs__name">Kristian Kalle</div>
+              </div>
+              <div class="content-tabs__item">
+                <div class="content-tabs__img">
+                  <img src="img/team.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">CTO</div>
+                <div class="content-tabs__name">Mathias Liias</div>
+              </div>
+              <div class="content-tabs__item">
+                <div class="content-tabs__img">
+                  <img src="img/team.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">Head of sales</div>
+                <div class="content-tabs__name">Hans-Kristjan Velling</div>
+              </div>
+              <div class="content-tabs__item">
+                <div class="content-tabs__img">
+                  <img src="img/team.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">Business process manager</div>
+                <div class="content-tabs__name">Sander Lõhmus</div>
+              </div>
+              <div class="content-tabs__item">
+                <div class="content-tabs__img">
+                  <img src="img/team.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">Marketing</div>
+                <div class="content-tabs__name">Fred-Erik Piirmaa</div>
+              </div>
+              <div class="content-tabs__item">
+                <div class="content-tabs__img">
+                  <img src="img/team.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">I don’t know</div>
+                <div class="content-tabs__name">Who else?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
