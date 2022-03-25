@@ -159,14 +159,23 @@
   backface-visibility: hidden;
   transition: all 0.3s ease 0s;
   outline: 1px solid rgb(233, 229, 229);
+  @media screen and ( max-width:  768px){
+  &:after {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
+  }
   &:nth-child(1) {
     border-radius: 12px;
     background-blend-mode: multiply;
     backdrop-filter: blur(10px);
     &:after {
       content: "";
-      background: url("../img/bg-price-mobile-first.png") rgba(228, 224, 224, 0.35);
+      background-color: rgba(228, 224, 224, 0.35);
+      background-image: url("../img/bg-price-mobile-first.png");
       opacity: 0.35;
       top: 0;
       left: 0;
@@ -213,6 +222,7 @@
   @media (max-width: 993px) {
     padding-right: 10px;
     padding-left: 10px;
+    position: relative;
   }
   @media (max-width: 576px) {
     width: 310px;
