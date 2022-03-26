@@ -216,6 +216,24 @@ ul {
     }
   }
 }
+.blog {
+  .scroll-down {
+    @media (max-width: 400px) {
+      right: 3px;
+    }
+  }
+}
+
+.single {
+  .scroll-down {
+    @media (max-width: 992px) {
+      bottom: 220px;
+    }
+    @media (max-width: 576px) {
+      right: 2px;
+    }
+  }
+}
 
 .cookies {
   padding-top: 17px;
