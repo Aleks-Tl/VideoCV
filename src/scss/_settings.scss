@@ -207,6 +207,15 @@ ul {
     }
   }
 }
+.product {
+  .scroll-down {
+    bottom: auto;
+    top: 200px;
+    @media (max-width: 500px) {
+      right: 3px;
+    }
+  }
+}
 
 .cookies {
   padding-top: 17px;
