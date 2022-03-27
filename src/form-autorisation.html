@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="header">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <section class="autorisation price">
+      <div class="container">
+        <div class="autorisation__wrap">
+          <div class="autorisation__title title">Login</div>
+          <div class="autorisation__subtitle">Login to start using VideoCV!</div>
+          <div class="price__switch autorisation__switch">
+            <p class="price__switch_year">Sign up</p>
+            <label class="switch">
+              <input type="checkbox" name="switcher" id="price" checked>
+              <span class="slider round"></span>
+            </label>
+            <p class="price__switch_month active">Login</p>
+          </div>
+          <form action="#" class="autorisation__form">
+            <label for="name">USERNAME</label>
+            <input id="username" name="name" placeholder="Data field" type="text" required>
+            <div class="autorisation__passwrap">
+              <label for="phone">PASSWORD</label>
+              <input class="show-pass" name="email" placeholder="Data field" type="password">
+              <div class="show-password"><img src="img/show-password.svg" alt="show password"></div>
+            </div>
+
+            <div class="autorisation__checkbox">
+              <input type="checkbox" id="check" name="check">
+              <label for="check">Keep me signed in</label>
+              <a href="forgot.html">Forgot your password?</a>
+            </div>
+            <div class="button__wrap">
+              <button class="autorisation__btn btn btn-reset">Log in</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    @include('partials/ready.html')
+
+    @include('partials/footer.html')
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

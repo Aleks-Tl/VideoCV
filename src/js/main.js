@@ -214,3 +214,19 @@ window.addEventListener("resize", function (event) {
   }
   mobileTabs();
 });
+
+
+/* function showPassword() {
+  const btnShow = document.querySelector('.show-password');
+  const input = document.querySelector('.show-pass');
+  btnShow.addEventListener('click', () => {
+
+    if (input.getAttribute('type') === 'password') {
+      input.setAttribute('type', 'text');
+
+    } else {
+      input.setAttribute('type', 'password');
+    }
+  });
+}
+showPassword(); */

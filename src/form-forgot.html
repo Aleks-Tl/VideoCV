@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="header">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <section class="autorisation price">
+      <div class="container">
+        <div class="autorisation__wrap">
+          <div class="autorisation__title title">Forgot your password?</div>
+          <div class="autorisation__subtitle">Please type in your email to initiate password recovery.</div>
+          <div class="price__switch autorisation__switch">
+            <p class="price__switch_year">Sign up</p>
+            <label class="switch">
+              <input type="checkbox" name="switcher" id="price" checked>
+              <span class="slider round"></span>
+            </label>
+            <p class="price__switch_month active">Login</p>
+          </div>
+          <form action="#" class="autorisation__form">
+            <label for="e-mail">EMAIL</label>
+            <input id="e-mail" name="name" placeholder="Data field" type="email" required>
+            <div class="button__wrap button__wrap_forgot">
+              <button class="autorisation__btn btn btn-reset">Reset password</button>
+              <button class="autorisation__btn btn-outline btn-reset">Log in</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    @include('partials/ready.html')
+
+    @include('partials/footer.html')
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

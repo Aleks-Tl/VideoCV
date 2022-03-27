@@ -235,6 +235,16 @@ ul {
   }
 }
 
+.contact {
+  .scroll-down {
+    @media (max-width: 992px) {
+      right: 3px;
+      bottom: auto;
+      top: 180px;
+    }
+  }
+}
+
 .cookies {
   padding-top: 17px;
   padding-bottom: 14px;

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="header">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <!-- Form -->
+
+    <section class="contact">
+      <a href="#footer" class="scroll-down"><span>Scroll down</span><img src="img/scroll-down.png" alt=""></a>
+      <section class="question">
+        <div class="container">
+          <div class="question__wrap">
+            <div class="question__left">
+              <div class="question__suptitle">Have some questions?</div>
+              <div class="question__title title">Thank you for your interest in VideoCV</div>
+              <div class="question__text">
+                <p>You have a question or want to leave your contact? Lets go get food or maybe have a call? Send us a
+                  message and we’ll get the ball rolling.</p>
+
+                <p>Operating in European and African markets,
+                  VideoCV helps to save time and money for businesses big and small.
+                  Hire a person, not paper. </p>
+              </div>
+              <div class="question__contacts">
+                <div class="question__phone">
+                  <span>Phone</span>
+                  <a href="tel:372518394">+372 518 1394</a>
+                </div>
+                <div class="question__code">
+                  <span class="code">Registration code</span>
+                  14098592
+                </div>
+              </div>
+            </div>
+            <div class="question__right">
+              <form action="#" class="feed-form">
+                <label for="name">NAME</label>
+                <input id="name" name="name" placeholder="Your name" type="text" required>
+                <div class="feed-form__wrapper">
+                  <div><label for="email">EMAIL</label>
+                    <input id="email" name="email" placeholder="Data field" type="email" required>
+                  </div>
+                  <div>
+                    <label for="phone">PHONE</label>
+                    <input id="phone" name="email" placeholder="Data field" type="tel" required>
+                  </div>
+                </div>
+                <label for="text">YOUR MESSAGE</label>
+                <textarea id="text" name="text" placeholder="I would like to..."></textarea>
+                <div class="button__wrap">
+                  <button class="feed-form__btn btn btn-reset">Send it</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Section Trusted  -->
+      <section class="trusted">
+        <div class="container">
+          <div class="trusted__suptitle">Connecting with clients</div>
+          <div class="trusted__title title">Trusted by the best</div>
+          <div class="trusted__wrap">
+
+            <div class="trusted__item">
+              <span>“</span>
+              <div class="trusted__content">
+                <div class="trusted__text">In addition to a user friendly platform, video gave us more information about
+                  the candidates courage, self-expression skills and creativity that was supported by the resumé.</div>
+                <div class="trusted__name">- University of Tartu</div>
+              </div>
+            </div>
+            <div class="trusted__item">
+              <span>“</span>
+              <div class="trusted__content">
+                <div class="trusted__text">Through VideoCV platform the amount of candidates was lower but the quality
+                  of them was on opposite much higher. The right person was found a lot quicker than expected.</div>
+                <div class="trusted__name">- Apollo</div>
+              </div>
+            </div>
+            <div class="trusted__item">
+              <span>“</span>
+              <div class="trusted__content">
+                <div class="trusted__text">VideoCV platform definitely adds value to the recruitment process. It saves
+                  time on interviews and also lets us see through more candidates than we could interview.</div>
+                <div class="trusted__name">- Estonian Academy<br>
+                  of Security Sciences</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    @include('partials/ready.html')
+
+    @include('partials/footer.html')
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
