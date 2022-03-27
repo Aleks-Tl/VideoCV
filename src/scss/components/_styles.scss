@@ -1376,6 +1376,28 @@
     line-height: 24px;
     color: #cbcbcb;
     margin-bottom: 10px;
+    background-image: url("../img/bird.png");
+    background-size: 14px 9px;
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .select__wrap {
+    /* position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      width: 10px;
+      height: 10px;
+      background-color: transparent;
+      border: 1px solid #000;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+      cursor: pointer;
+    } */
   }
   option {
     color: var(--colorMain);
