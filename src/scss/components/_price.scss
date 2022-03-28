@@ -108,7 +108,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--colorGreen);
+    //background-color: #ccc;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -159,14 +160,12 @@
   backface-visibility: hidden;
   transition: all 0.3s ease 0s;
   outline: 1px solid rgb(233, 229, 229);
-  @media screen and ( max-width:  768px){
-  &:after {
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
+  @media screen and (max-width: 768px) {
+    &:after {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
   &:nth-child(1) {
     border-radius: 12px;
@@ -281,10 +280,8 @@
   }
 }
 
-
-@-moz-document url-prefix() { 
+@-moz-document url-prefix() {
   .item-price {
     position: relative;
-
   }
 }

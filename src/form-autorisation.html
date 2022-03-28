@@ -10,8 +10,14 @@
     <section class="autorisation price">
       <div class="container">
         <div class="autorisation__wrap">
-          <div class="autorisation__title title">Login</div>
-          <div class="autorisation__subtitle">Login to start using VideoCV!</div>
+          <div class="log_title_wrap">
+            <div class="autorisation__title title">Login</div>
+            <div class="autorisation__subtitle">Login to start using VideoCV!</div>
+          </div>
+          <div class="reg_title_wrap">
+            <div class="autorisation__title title">Company sign up</div>
+            <div class="autorisation__subtitle">Fill out the requires fields and enjoy using VideoCV today! </div>
+          </div>
           <div class="price__switch autorisation__switch">
             <p class="price__switch_year">Sign up</p>
             <label class="switch">
@@ -20,7 +26,7 @@
             </label>
             <p class="price__switch_month active">Login</p>
           </div>
-          <form action="#" class="autorisation__form">
+          <form action="#" class="autorisation__form log_form">
             <label for="name">USERNAME</label>
             <input id="username" name="name" placeholder="Data field" type="text" required>
             <div class="autorisation__passwrap">
@@ -28,14 +34,69 @@
               <input class="show-pass" name="email" placeholder="Data field" type="password">
               <div class="show-password"><img src="img/show-password.svg" alt="show password"></div>
             </div>
-
             <div class="autorisation__checkbox">
               <input type="checkbox" id="check" name="check">
               <label for="check">Keep me signed in</label>
-              <a href="forgot.html">Forgot your password?</a>
+              <a href="form-forgot.html">Forgot your password?</a>
             </div>
             <div class="button__wrap">
               <button class="autorisation__btn btn btn-reset">Log in</button>
+            </div>
+          </form>
+          <form action="#" class="autorisation__form reg_form">
+            <span class="span"></span>
+            <label for="email">EMAIL*</label>
+            <input id="email" name="name" placeholder="Data field" type="email" required>
+
+            <div class="autorisation__passwrap">
+              <label for="phone">PASSWORD*</label>
+              <input class="show-pass" name="email" placeholder="Data field" type="password">
+              <div class="show-password"><img src="img/show-password.svg" alt="show password"></div>
+            </div>
+
+            <label for="company">COMPANY NAME*</label>
+            <input id="company" name="name" placeholder="Data field" type="email" required>
+
+            <label for="function">JOB FUNCTION*</label>
+            <div class="select__wrap">
+              <select id="function" name="function">
+                <option value="value1">Value 1</option>
+                <option value="value2" selected>Value 2</option>
+                <option value="value3">Value 3</option>
+              </select>
+            </div>
+
+            <label for="employees">NUMBER OF EMPLOYEES*</label>
+            <div class="select__wrap">
+              <select id="employees" name="employees">
+                <option value="value1">Value 1</option>
+                <option value="value2" selected>Value 2</option>
+                <option value="value3">Value 3</option>
+              </select>
+            </div>
+
+            <label for="recruitments">YEARLY RECRUITMENTS*</label>
+            <div class="select__wrap">
+              <select id="recruitments" name="recruitments">
+                <option value="value1">Value 1</option>
+                <option value="value2" selected>Value 2</option>
+                <option value="value3">Value 3</option>
+              </select>
+            </div>
+
+            <div class="autorisation__checkbox autorisation__checkbox_reg">
+              <div><input type="checkbox" id="check1" name="check1">
+                <label for="check1">Using applicant tracking software</label>
+              </div>
+              <div><input type="checkbox" id="check2" name="check2">
+                <label for="check2">I want to receive the monthly newsletter,
+                  product updates and personal promotions</label>
+              </div>
+
+            </div>
+            <div class="button__wrap button__wrap_reg">
+              <a href="#">By signing up for VideoCV you agree to the Terms of use</a>
+              <button class="autorisation__btn btn btn-reset">Sign up</button>
             </div>
           </form>
         </div>
@@ -48,6 +109,36 @@
     @include('partials/footer.html')
 
   </div>
+
+  <script>
+    const switcher = document.getElementById('price');
+    const regForm = document.querySelector('.reg_form');
+    const logForm = document.querySelector('.log_form');
+    const regTitle = document.querySelector('.reg_title_wrap');
+    const logTitle = document.querySelector('.log_title_wrap');
+    const price__switch_month = document.querySelector('.price__switch_month');
+    const price__switch_year = document.querySelector('.price__switch_year');
+    switcher.addEventListener('change', function () {
+      let check = this.checked;
+      if (check !== false) {
+        regForm.style.display = 'none';
+        regTitle.style.display = 'none';
+        logTitle.style.display = 'block';
+        logForm.style.display = 'block';
+        price__switch_month.classList.add('active');
+        price__switch_year.classList.remove('active');
+      }
+      else {
+        price__switch_month.classList.remove('active');
+        price__switch_year.classList.add('active');
+        regForm.style.display = 'block';
+        regTitle.style.display = 'block';
+        logTitle.style.display = 'none';
+        logForm.style.display = 'none';
+      }
+    });
+
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
 </body>

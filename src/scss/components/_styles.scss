@@ -363,6 +363,9 @@
       text-align: center;
     }
   }
+  .hide {
+    display: none;
+  }
 }
 .tabs {
   &__wrap {
@@ -388,16 +391,16 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    &:hover {
+    /* &:hover {
       background-color: rgb(235, 230, 230);
-    }
+    } */
     @media (max-width: 521px) {
       margin-bottom: 16px;
     }
-    &.active {
+    &:hover {
       color: var(--colorWhite);
       background-color: var(--colorMain);
-      border: 1px solid #534072;
+      //border: 1px solid #534072;
       border-radius: 6px;
     }
   }
@@ -408,12 +411,8 @@
 }
 
 .content-tabs {
-  display: none;
-  &.active {
-    display: flex;
-  }
   &__items {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     gap: 50px;
     align-items: center;
@@ -940,48 +939,54 @@
   }
 
   &__pagination {
-    > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    .nav-links {
       display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .page-numbers {
+      font-size: 15px;
+      line-height: 15px;
+      color: var(--colorMain);
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--colorMain);
+      border-radius: 12px;
+      display: inline-flex;
       justify-content: center;
-      margin-top: 100px;
-      > li {
-        margin-right: 4px;
-        margin-left: 4px;
-        a {
-          font-size: 15px;
-          line-height: 15px;
-          color: var(--colorMain);
-          width: 40px;
-          height: 40px;
-          border: 1px solid var(--colorMain);
-          border-radius: 12px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: all 0.3s ease 0s;
-          &:hover {
-            color: var(--colorWhite);
-            background-color: var(--colorGreen);
-            border: 1px solid var(--colorGreen);
-          }
-          &.active {
-            color: var(--colorWhite);
-            background-color: var(--colorGreen);
-            border: 1px solid var(--colorGreen);
-          }
-        }
-        &:nth-child(4) {
-          display: flex;
-          height: 100%;
+      align-items: center;
+      transition: all 0.3s ease 0s;
+      margin: 0 auto;
+      cursor: pointer;
+      &.dots {
+        border: none;
+        font-size: 28px;
+        color: #bbbbbb;
+        align-items: flex-start;
+        padding-top: 5px;
+        &:hover {
+          background-color: transparent;
+          border: none;
           color: #bbbbbb;
-          font-size: 30px;
-          margin-right: 10px;
-          margin-left: 10px;
         }
       }
-      @media (max-height: 992px) {
-        margin-top: 50px;
+      &:hover {
+        color: var(--colorWhite);
+        background-color: var(--colorGreen);
+        border: 1px solid var(--colorGreen);
       }
+      &.current {
+        color: var(--colorWhite);
+        background-color: var(--colorGreen);
+        border: 1px solid var(--colorGreen);
+      }
+    }
+    @media (max-width: 992px) {
+      margin-top: 50px;
     }
     @media (max-width: 576px) {
       display: none;
@@ -1226,13 +1231,15 @@
       padding-left: 5px;
       outline: none;
       margin-bottom: 10px;
+      background: transparent;
+      font-size: 16px;
       &::placeholder {
         line-height: 24px;
         color: #cbcbcb;
       }
-      &:focus {
+      /* &:focus {
         background-color: rgba(#14efb5, 0.1);
-      }
+      } */
     }
 
     input[type="password"] {
@@ -1292,16 +1299,16 @@
     input[type="checkbox"]:checked:after {
       content: "";
       display: block;
-      width: 14px;
-      height: 10px;
+      width: 8px;
+      height: 14px;
       border: solid var(--colorGreen);
       border-width: 0 2px 2px 0;
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
       position: absolute;
-      top: 0px;
-      left: 4px;
+      top: -2px;
+      left: 7px;
     }
     &_reg {
       display: flex;
@@ -1376,6 +1383,7 @@
     line-height: 24px;
     color: #cbcbcb;
     margin-bottom: 10px;
+    background-color: transparent;
     background-image: url("../img/bird.png");
     background-size: 14px 9px;
     background-position: 97% center;
@@ -1401,5 +1409,9 @@
   }
   option {
     color: var(--colorMain);
+  }
+  .reg_form,
+  .reg_title_wrap {
+    display: none;
   }
 }

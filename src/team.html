@@ -43,67 +43,112 @@
       </div>
     </section>
 
+
     <!-- Section Our amazing team -->
     <section class="teamtabs">
       <div class="container">
         <div class="teamtabs__suptitle">Well hello there</div>
         <div class="teamtabs__title title">Our amazing team</div>
         <div class="tabs__wrap">
-          <div class="tabs__items">
-            <div class="tabs__item active" data-tab="0">All</div>
-            <div class="tabs__item" data-tab="1">Business</div>
-            <div class="tabs__item" data-tab="2">Sales</div>
-            <div class="tabs__item" data-tab="3">Development</div>
-          </div>
+
+          <nav class="navs">
+            <ul class="tabs__items">
+              <li data-f="all" class="tabs__item active">ALL</li>
+              <li data-f="alizarin" class="tabs__item alizarin">Business</li>
+              <li data-f="wisteria" class="tabs__item wisteria">Sales</li>
+              <li data-f="emerland" class="tabs__item emerland">Development</li>
+            </ul>
+          </nav>
 
           <div class="tabs__content active content-tabs" id="0">
             <div class="content-tabs__items">
-              <div class="content-tabs__item">
+              <div class="content-tabs__item box alizarin">
                 <div class="content-tabs__img">
                   <img src="img/team.png" alt="team-img">
                 </div>
                 <div class="content-tabs__worker">CEO & founder</div>
                 <div class="content-tabs__name">Kristian Kalle</div>
               </div>
-              <div class="content-tabs__item">
+              <div class="content-tabs__item box wisteria">
                 <div class="content-tabs__img">
-                  <img src="img/team.png" alt="team-img">
+                  <img src="img/blog-img-1.png" alt="team-img">
                 </div>
                 <div class="content-tabs__worker">CTO</div>
                 <div class="content-tabs__name">Mathias Liias</div>
               </div>
-              <div class="content-tabs__item">
+              <div class="content-tabs__item box emerland">
                 <div class="content-tabs__img">
-                  <img src="img/team.png" alt="team-img">
+                  <img src="img/blog-img-2.png" alt="team-img">
                 </div>
                 <div class="content-tabs__worker">Head of sales</div>
                 <div class="content-tabs__name">Hans-Kristjan Velling</div>
               </div>
-              <div class="content-tabs__item">
+              <div class="content-tabs__item box alizarin">
                 <div class="content-tabs__img">
-                  <img src="img/team.png" alt="team-img">
+                  <img src="img/blog-img-3.png" alt="team-img">
                 </div>
                 <div class="content-tabs__worker">Business process manager</div>
                 <div class="content-tabs__name">Sander Lõhmus</div>
               </div>
-              <div class="content-tabs__item">
+              <div class="content-tabs__item box wisteria">
                 <div class="content-tabs__img">
-                  <img src="img/team.png" alt="team-img">
+                  <img src="img/blog-img-4.png" alt="team-img">
                 </div>
                 <div class="content-tabs__worker">Marketing</div>
                 <div class="content-tabs__name">Fred-Erik Piirmaa</div>
               </div>
-              <div class="content-tabs__item">
+              <div class="content-tabs__item box wisteria">
                 <div class="content-tabs__img">
-                  <img src="img/team.png" alt="team-img">
+                  <img src="img/blog-img-5.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">I don’t know</div>
+                <div class="content-tabs__name">Who else?</div>
+              </div>
+              <div class="content-tabs__item box emerland">
+                <div class="content-tabs__img">
+                  <img src="img/blog-img-6.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">I don’t know</div>
+                <div class="content-tabs__name">Who else?</div>
+              </div>
+              <div class="content-tabs__item box wisteria">
+                <div class="content-tabs__img">
+                  <img src="img/blog-img-7.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">I don’t know</div>
+                <div class="content-tabs__name">Who else?</div>
+              </div>
+              <div class="content-tabs__item box emerland">
+                <div class="content-tabs__img">
+                  <img src="img/blog-img-3.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">I don’t know</div>
+                <div class="content-tabs__name">Who else?</div>
+              </div>
+              <div class="content-tabs__item box alizarin">
+                <div class="content-tabs__img">
+                  <img src="img/blog-img-10.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">I don’t know</div>
+                <div class="content-tabs__name">Who else?</div>
+              </div>
+              <div class="content-tabs__item box wisteria">
+                <div class="content-tabs__img">
+                  <img src="img/blog-img-9.png" alt="team-img">
+                </div>
+                <div class="content-tabs__worker">I don’t know</div>
+                <div class="content-tabs__name">Who else?</div>
+              </div>
+              <div class="content-tabs__item box alizarin">
+                <div class="content-tabs__img">
+                  <img src="img/blog-img-11.png" alt="team-img">
                 </div>
                 <div class="content-tabs__worker">I don’t know</div>
                 <div class="content-tabs__name">Who else?</div>
               </div>
             </div>
           </div>
-
-          <div class="tabs__content content-tabs" id="1">
+          <!-- <div class="tabs__content content-tabs" id="1">
             <div class="content-tabs__items">
               <div class="content-tabs__item">
                 <div class="content-tabs__img">
@@ -201,10 +246,12 @@
               </div>
 
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
+
+
 
     <!-- Section Questions -->
     @include('partials/form.html')
@@ -215,6 +262,21 @@
     @include('partials/footer.html')
 
   </div>
+
+  <script>
+    const filterBox = document.querySelectorAll('.box');
+    document.querySelector('.navs').addEventListener('click', event => {
+      if (event.target.tagName !== 'LI') return false;
+      let filterClass = event.target.dataset['f'];
+      filterBox.forEach(elem => {
+        elem.classList.remove('hide');
+        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+          elem.classList.add('hide');
+        }
+      });
+    });
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
 </body>

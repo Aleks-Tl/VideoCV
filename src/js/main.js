@@ -188,17 +188,6 @@ function mobileTabs() {
 
 }
 
-
-/* let switchMonth = document.querySelector('.price__switch_month');
-let switchYear = document.querySelector('.price__switch_year');
-let switchInput = document.querySelector('#price');
-
-if (switchInput.checked) {
-  switchMonth.classList.add('active');
-} else {
-  switchMonth.classList.remove('active');
-}
- */
 mobileTabs();
 if (trustingTitle) {
   trustingContentMove();
@@ -216,17 +205,26 @@ window.addEventListener("resize", function (event) {
 });
 
 
-/* function showPassword() {
-  const btnShow = document.querySelector('.show-password');
-  const input = document.querySelector('.show-pass');
-  btnShow.addEventListener('click', () => {
+function showPassword() {
+  const btnShow = document.querySelectorAll('.show-password');
+  const input = document.querySelectorAll('.show-pass');
+  btnShow.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      input.forEach((element) => {
+        if (element.getAttribute('type') === 'password') {
+          element.setAttribute('type', 'text');
 
-    if (input.getAttribute('type') === 'password') {
-      input.setAttribute('type', 'text');
-
-    } else {
-      input.setAttribute('type', 'password');
-    }
+        } else {
+          element.setAttribute('type', 'password');
+        }
+      });
+    });
   });
 }
-showPassword(); */
+showPassword();
+
+
+
+
+
+
