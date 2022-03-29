@@ -650,6 +650,7 @@
     border-bottom: 1px solid #000000;
     height: 130px;
     outline: none;
+    background-color: transparent;
     &::placeholder {
       line-height: 24px;
       color: #cbcbcb;
@@ -660,6 +661,9 @@
   }
   &__btn {
     margin-top: 32px;
+  }
+  .error {
+    color: red;
   }
 }
 
@@ -1182,6 +1186,9 @@
 .autorisation {
   background: linear-gradient(-50deg, #fff 50%, rgb(#14efb5, 0.2) 100%);
   // .autorisation__wrap
+  .error {
+    color: red;
+  }
 
   &__wrap {
     width: 100%;
@@ -1236,6 +1243,9 @@
       &::placeholder {
         line-height: 24px;
         color: #cbcbcb;
+      }
+      &.error {
+        border-color: red;
       }
       /* &:focus {
         background-color: rgba(#14efb5, 0.1);
@@ -1414,4 +1424,45 @@
   .reg_title_wrap {
     display: none;
   }
+  .message {
+    padding: 17px 25px 17px 69px;
+    font-family: "Poppins";
+    line-height: 26px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #cdfff2;
+    border-radius: 6px;
+    background-image: url("../img/bg-message.png");
+    background-position: 32px center;
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+    &__email {
+      max-width: 700px;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    &__login {
+      max-width: 445px;
+      position: relative;
+      display: none;
+      &.active {
+        display: block;
+      }
+      .close {
+        position: absolute;
+        cursor: pointer;
+        top: 12px;
+        right: 25px;
+        font-size: 25px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.autorisation__passwrap input.error + label + .show-password img {
+  bottom: 42px;
 }

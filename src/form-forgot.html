@@ -13,9 +13,9 @@
           <div class="autorisation__title title">Forgot your password?</div>
           <div class="autorisation__subtitle">Please type in your email to initiate password recovery.</div>
 
-          <form action="#" class="autorisation__form">
+          <form action="#" class="autorisation__form" id="forgot">
             <label for="e-mail">EMAIL</label>
-            <input id="e-mail" name="name" placeholder="Data field" type="email" required>
+            <input id="e-mail" name="name" placeholder="Data field" type="email">
             <div class="button__wrap button__wrap_forgot">
               <button class="autorisation__btn btn btn-reset">Reset password</button>
               <button class="autorisation__btn btn-outline btn-reset">Log in</button>
@@ -31,6 +31,9 @@
     @include('partials/footer.html')
 
   </div>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
 </body>

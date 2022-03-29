@@ -225,6 +225,43 @@ showPassword();
 
 
 
+// Validation
+
+function valideForms(form) {
+  $(form).validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      company: "required",
+      pass: "required",
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    /* messages: {
+      name: {
+        required: "Fill in this field",
+      },
+      pass: "Fill in this field",
+      email: {
+        required: "Fill in this field",
+        email: "You entered your email incorrectly"
+      }
+    } */
+  });
+};
+
+valideForms('#form-one');
+valideForms('#form-two');
+valideForms('#form-three');
+valideForms('#forgot');
+
+
+
 
 
 

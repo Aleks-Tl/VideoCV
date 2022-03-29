@@ -37,16 +37,16 @@
               </div>
             </div>
             <div class="question__right">
-              <form action="#" class="feed-form">
+              <form action="#" class="feed-form" id="form-three">
                 <label for="name">NAME</label>
-                <input id="name" name="name" placeholder="Your name" type="text" required>
+                <input id="name" name="name" placeholder="Your name" type="text">
                 <div class="feed-form__wrapper">
                   <div><label for="email">EMAIL</label>
-                    <input id="email" name="email" placeholder="Data field" type="email" required>
+                    <input id="email" name="email" placeholder="Data field" type="email">
                   </div>
                   <div>
                     <label for="phone">PHONE</label>
-                    <input id="phone" name="email" placeholder="Data field" type="tel" required>
+                    <input id="phone" name="phone" placeholder="Data field" type="tel">
                   </div>
                 </div>
                 <label for="text">YOUR MESSAGE</label>
@@ -103,6 +103,9 @@
     @include('partials/footer.html')
 
   </div>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
 </body>

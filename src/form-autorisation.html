@@ -9,7 +9,10 @@
 
     <section class="autorisation price">
       <div class="container">
+        <span class="message message__email">The password recovery message has been sent, check your email.</span>
+        <span class="message message__login">Welcome to VideoCV, please login <span class="close">&times;</span></span>
         <div class="autorisation__wrap">
+
           <div class="log_title_wrap">
             <div class="autorisation__title title">Login</div>
             <div class="autorisation__subtitle">Login to start using VideoCV!</div>
@@ -26,12 +29,12 @@
             </label>
             <p class="price__switch_month active">Login</p>
           </div>
-          <form action="#" class="autorisation__form log_form">
+          <form action="#" class="autorisation__form log_form" id="form-one">
             <label for="name">USERNAME</label>
-            <input id="username" name="name" placeholder="Data field" type="text" required>
+            <input id="username" name="name" placeholder="Data field" type="text">
             <div class="autorisation__passwrap">
-              <label for="phone">PASSWORD</label>
-              <input class="show-pass" name="email" placeholder="Data field" type="password">
+              <label for="pass">PASSWORD</label>
+              <input class="show-pass" name="pass" placeholder="Data field" type="password">
               <div class="show-password"><img src="img/show-password.svg" alt="show password"></div>
             </div>
             <div class="autorisation__checkbox">
@@ -43,19 +46,19 @@
               <button class="autorisation__btn btn btn-reset">Log in</button>
             </div>
           </form>
-          <form action="#" class="autorisation__form reg_form">
+          <form action="#" class="autorisation__form reg_form" id="form-two">
             <span class="span"></span>
             <label for="email">EMAIL*</label>
-            <input id="email" name="name" placeholder="Data field" type="email" required>
+            <input id="email" name="name" placeholder="Data field" type="email">
 
             <div class="autorisation__passwrap">
               <label for="phone">PASSWORD*</label>
-              <input class="show-pass" name="email" placeholder="Data field" type="password">
+              <input class="show-pass" name="pass" placeholder="Data field" type="password">
               <div class="show-password"><img src="img/show-password.svg" alt="show password"></div>
             </div>
 
             <label for="company">COMPANY NAME*</label>
-            <input id="company" name="name" placeholder="Data field" type="email" required>
+            <input id="company" name="company" placeholder="Data field" type="text">
 
             <label for="function">JOB FUNCTION*</label>
             <div class="select__wrap">
@@ -139,6 +142,9 @@
     });
 
   </script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
 </body>
