@@ -1425,11 +1425,11 @@
     display: none;
   }
   .message {
-    padding: 17px 25px 17px 69px;
+    padding: 17px 40px 17px 55px;
     font-family: "Poppins";
     line-height: 26px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
     text-align: center;
     background: #cdfff2;
     border-radius: 6px;
@@ -1437,17 +1437,15 @@
     background-position: 32px center;
     background-repeat: no-repeat;
     background-size: 23px 23px;
+    @media (max-width: 500px) {
+      font-size: 14px;
+      line-height: 18px;
+      background-position: 20px center;
+    }
     &__email {
       max-width: 700px;
-      display: none;
-      &.active {
-        display: block;
-      }
-    }
-    &__login {
-      max-width: 445px;
       position: relative;
-      display: none;
+      //display: none;
       &.active {
         display: block;
       }
@@ -1458,6 +1456,30 @@
         right: 25px;
         font-size: 25px;
         margin-top: 5px;
+        @media (max-width: 652px) {
+          top: 5px;
+          right: 10px;
+        }
+      }
+    }
+    &__login {
+      max-width: 445px;
+      position: relative;
+      //display: none;
+      &.active {
+        display: block;
+      }
+      .close {
+        position: absolute;
+        cursor: pointer;
+        top: 12px;
+        right: 25px;
+        font-size: 25px;
+        margin-top: 5px;
+        @media (max-width: 652px) {
+          top: 5px;
+          right: 10px;
+        }
       }
     }
   }

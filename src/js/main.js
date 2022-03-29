@@ -3,6 +3,8 @@ import vars from './_vars';
 import './_functions';
 import './_components';
 
+
+
 const burger = document.querySelector('.burger'),
   menu = document.querySelector('.nav-menu').firstElementChild,
   pageBody = document.querySelector('.page__body'),
@@ -131,7 +133,7 @@ function trustingContentMove() {
   }
 }
 
-
+// Tabs
 function Tabs() {
   let bindAll = function () {
     let menuElements = document.querySelectorAll('[data-tab]');
@@ -204,6 +206,7 @@ window.addEventListener("resize", function (event) {
   mobileTabs();
 });
 
+// Function show password
 
 function showPassword() {
   const btnShow = document.querySelectorAll('.show-password');
