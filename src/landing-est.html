@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="header">
+
+@include('partials/head.html')
+
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <!-- Section talent -->
+    <section class="talent">
+      <div class="container">
+
+        <a href="#footer" class="scroll-down"><span>Scroll down</span><img src="img/scroll-down.png" alt=""></a>
+        <div class="talent__wrap">
+          <div class="talent__descr">
+            <!-- <div class="talent__suptitle">What is VideoCV?</div> -->
+            <h1 class="talent__title title">Video-värbamis tööriist, mis säästab kuni 70% värbamisele kuluvat aega</h1>
+            <div class="talent__text">VideoCV pakub lihtsat ja intuitiivset platvormi eelsalvestatud videointervjuude
+              hindamiseks ja kandidaatide analüüsimiseks.</div>
+            <div class="talent__buttons">
+              <a href="#" class="talent__btn btn btn-reset">Broneeri tasuta demo</a>
+            </div>
+          </div>
+          <div class="talent__img">
+            <img src="img/land-img-1.png" alt="land-img">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="features__wrap features-est">
+          <div class="features__title title">Kuidas VideoCV värbamisele<br> kuluvat aega säästab? </div>
+          <div class="features__items">
+            <div class="features__item">
+              <div class="features__img"><img src="img/land-img-2.svg" alt="land-img"></div>
+              <div class="features__name">Eelsalvestatud <br>kandidaadi videod</div>
+            </div>
+            <div class="features__item">
+              <div class="features__img"><img src="img/land-img-3.svg" alt="land-img"></div>
+              <div class="features__name">Piiramatu arv<br> kasutajaid</div>
+            </div>
+            <div class="features__item">
+              <div class="features__img"><img src="img/land-img-4.svg" alt="land-img"></div>
+              <div class="features__name">Hinda ja jaga tagasisidet<br> meeskonna liikmetega</div>
+            </div>
+            <!-- <div class="features__item">
+              <div class="features__img"><img src="img/land-img-5.svg" alt="land-img"></div>
+              <div class="features__name">Candidate <br>analytics</div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="finding finding-est">
+      <div class="container">
+        <div class="finding__wrap">
+          <div class="finding__left">
+            <h2 class="finding__title title">Video värbamise lahendus aitab teil saavutada paremaid tulemusi.</h2>
+            <div class="finding__list">
+              <ul>
+                <li>Suurendage intervjuude õnnestumise määra üle 80%</li>
+                <li>Vähem e-kirju, kõnesid ja intervjuusid</li>
+                <li>Parem arusaam kandidaadist ja tema kompetentsist</li>
+              </ul>
+            </div>
+          </div>
+          <div class="finding__right">
+            <div class="finding__img"><img src="img/land-img-6.svg" alt="land-img"></div>
+            <blockquote class="finding__text"><span>“</span> VideoCV platvormi kaasamisega saame juba värbamise esimeses
+              etapis kandidaadi kohta asjakohast teavet. VideoCV tööriista on lihtne kasutada, see säästab palju aega
+              ning muudab värbamise ja valiku efektiivsemaks.
+              <span>“</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ready-light ready-land">
+      <div class="container">
+        <div class="ready-light__wrap">
+          <div class="ready-light__title title">Aeg on ainus, mida juurde ei saa,
+            seega miks seda raisata.</div>
+          <a href="#" class="ready-light__btn btn btn-reset">Broneeri tasuta demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="land-form">
+      <div class="container">
+        <div class="land-form__wrap">
+          <div class="land-form__left">
+            <div class="land-form__suptitle">Ready to learn more?</div>
+            <div class="land-form__title title">Leave your contacts to get free demo</div>
+          </div>
+          <div class="land-form__right">
+            <form action="#" class="feed-form" id="form-four">
+              <label for="name">NAME</label>
+              <input id="name" name="name" placeholder="Peter Pan" type="text" required>
+              <label for="email">Work e-mail</label>
+              <input id="email" name="email" placeholder="name@company.com" type="email" required>
+              <label for="company">Company</label>
+              <input id="company" name="company" placeholder="Software LLC" type="text" required>
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" placeholder="(optional)" type="tel" required>
+              <button class="autorisation__btn feed-form__btn btn btn-reset">Get free demo</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

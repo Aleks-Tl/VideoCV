@@ -261,6 +261,7 @@ function valideForms(form) {
 valideForms('#form-one');
 valideForms('#form-two');
 valideForms('#form-three');
+valideForms('#form-four');
 valideForms('#forgot');
 
 
