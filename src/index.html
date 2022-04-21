@@ -238,7 +238,13 @@
             <div class="right-calculator__chart">
               <p>Cost of time and money</p>
               <div class="right-calculator__img">
-                <img src="img/chart.svg" alt="Chart">
+                <!-- <img src="img/chart.svg" alt="Chart"> -->
+                <div class="canvas_wrap">
+                  <canvas id="graphCanvas" width="350" height="350">
+                  </canvas>
+                </div>
+
+
                 <ul class="chart_list">
                   <li>
                     <div class="now">Now</div>
@@ -466,6 +472,7 @@
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="js/rbar.js"></script>
   <script src="js/main.js"></script>
 </body>
 

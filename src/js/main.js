@@ -99,8 +99,7 @@ function handleInputChange(e) {
   let positionVal = val;
   if (positionVal < 3) {
     positionVal = 3;
-  }
-  else if (positionVal > 93) {
+  } else if (positionVal > 93) {
     positionVal = 93;
   }
   rangeVal.style.left = (positionVal - 3) + '%';
@@ -125,6 +124,7 @@ const image = document.querySelector('.image');
 function getWindowWidth() {
   return window.innerWidth || document.body.clientWidth;
 }
+
 function trustingContentMove() {
   if (getWindowWidth() <= 768) {
     trustingTitle.after(trustingContent);
@@ -181,8 +181,7 @@ function mobileTabs() {
       tab.after(tabContent[i]);
       console.log(document.querySelector(`[data-tab="${id}"]`));
     }
-  }
-  else {
+  } else {
     for (let i = 0; i < tabContent.length; i++) {
       qualityWrap.append(tabContent[i]);
     }
@@ -264,8 +263,80 @@ valideForms('#form-three');
 valideForms('#form-four');
 valideForms('#forgot');
 
+// graph
 
 
+let graphVals = $('#rangevalue').text();
 
+let data = [{
+  '': Math.round(graphVals)
+},
+{
+  '': Math.round(graphVals - 10)
+},
+{
+  '': Math.round(graphVals * 0.2)
+},
+{
+  '': Math.round(graphVals * 0.4)
+}
+];
 
+const barcolor = [
+  '#7600FF',
+  '#7600FF',
+  '#00BF8D',
+  '#00BF8D',
 
+];
+const graph = {
+  barId: 'graphCanvas', // Need To pass canvas id  and mandatory to generate the bar graph
+  barData: data, // Bar data in the form of array of object and mandatory to pass atleast 1 value
+  barColour: barcolor, // Bar colour as array and the default value is '#020202'
+  barStroke: 40, // Bar Stroke as per your requirement and the default value is 50
+  barSpaces: 50, // Space between 2 bar graph and the default value is 80
+  barInnerPadding: 50, // Padding inside all side of the canvas and the default value is 80
+  barDivisionPositionFromLineX: 20, // X-Axis division position from left side of the bar graph and the deafult value is 20
+  barDivisionPositionFromLineY: 20, // Y-Axis division position from bottom side of the bar graph and the deafult value is 20
+  barAnimation: true, // Used to define the animation from the bottom to top position and the default value is true
+  barAnimationSpeed: 1, // Define the animation spedd of the graph and the default value is 1
+  barTextFont: "16px Poppins", // Define font size with font family name and the default value is 14px Arial
+  barDivision: 5, // Define the division to the Y-Axis and the default value is 5
+  barScaleDivisionReqX: true, // Define the scale division marking to the X-Axis and the default value is true
+  barScaleDivisionReqY: true, // Define the scale division marking to the Y-Axis and the default value is true
+  barScaleDivisionY: 20, // Define the manually setup the Y-Axis division upto the highest value of your array default value is null
+  barScaleDivisionStroke: 1, //Define the stroke of scale division and the default value is 1
+  barScaleDivisionColour: '#333', //Define the stroke colour of the scale division and the default value is #333
+  barAxisLineStroke: 2, //Define the stroke of the X & Y-Axis line and the default value is 1
+  barAxisLineColour: '#333', //Define the stroke colour of the X & Y-axis line and the default value is #333
+  barMaxHeight: 100 // Define the maximum height of the Y-Axis line of the bar graph and the default value is null
+};
+
+generateBarGraph(graph);
+
+let inpVal = $('.range_container input');
+
+inpVal.on('change', function(){
+  graphVals = +$('#rangevalue').text();
+
+  graph.barData = [{
+    '': graphVals
+  },
+  {
+    '': graphVals - 10
+  },
+  {
+    '': Math.round(graphVals * 0.2)
+  },
+  {
+    '': Math.round(graphVals * 0.4)
+  }
+  ];
+
+  console.log(graph.barData);
+  $('#graphCanvas').remove();
+  $('.canvas_wrap').append('<canvas id="graphCanvas" width="350" height="350"></canvas>')
+  generateBarGraph(graph);
+});
+
+// graph

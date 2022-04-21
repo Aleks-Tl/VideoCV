@@ -249,8 +249,8 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, scripts, styles, resources, images,  watchFiles);
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images,  htmlMinify);
 
 exports.cache = series(cache, rewrite);
