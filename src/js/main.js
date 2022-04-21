@@ -176,10 +176,10 @@ function mobileTabs() {
     for (let i = 0; i < tabContent.length; i++) {
 
       let id = tabContent[i].getAttribute('id');
-      let tab = document.querySelector(`[data-tab="${id}"]`);
+      let tab = document.querySelector(`[data-tab="jQuery{id}"]`);
 
       tab.after(tabContent[i]);
-      console.log(document.querySelector(`[data-tab="${id}"]`));
+      console.log(document.querySelector(`[data-tab="jQuery{id}"]`));
     }
   } else {
     for (let i = 0; i < tabContent.length; i++) {
@@ -230,7 +230,7 @@ showPassword();
 // Validation
 
 function valideForms(form) {
-  $(form).validate({
+  jQuery(form).validate({
     rules: {
       name: {
         required: true,
@@ -266,7 +266,7 @@ valideForms('#forgot');
 // graph
 
 
-let graphVals = $('#rangevalue').text();
+let graphVals = jQuery('#rangevalue').text();
 
 let data = [{
   '': Math.round(graphVals)
@@ -314,10 +314,10 @@ const graph = {
 
 generateBarGraph(graph);
 
-let inpVal = $('.range_container input');
+let inpVal = jQuery('.range_container input');
 
 inpVal.on('change', function () {
-  graphVals = +$('#rangevalue').text();
+  graphVals = +jQuery('#rangevalue').text();
 
   graph.barData = [{
     '': graphVals
@@ -334,8 +334,8 @@ inpVal.on('change', function () {
   ];
 
   console.log(graph.barData);
-  $('#graphCanvas').remove();
-  $('.canvas_wrap').append('<canvas id="graphCanvas" width="350" height="350"></canvas>')
+  jQuery('#graphCanvas').remove();
+  jQuery('.canvas_wrap').append('<canvas id="graphCanvas" width="350" height="350"></canvas>')
   generateBarGraph(graph);
 });
 
