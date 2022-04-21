@@ -316,7 +316,7 @@ generateBarGraph(graph);
 
 let inpVal = $('.range_container input');
 
-inpVal.on('change', function(){
+inpVal.on('change', function () {
   graphVals = +$('#rangevalue').text();
 
   graph.barData = [{

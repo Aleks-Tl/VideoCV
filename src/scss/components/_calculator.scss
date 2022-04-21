@@ -159,7 +159,8 @@
     background: var(--colorWhite);
     border: 5px solid var(--colorGreen);
     cursor: pointer;
-    box-shadow: 0 0 2px 0 #555;
+    //box-shadow: 0 0 2px 0 #555;
+    outline: 3px solid var(--colorGreen);
     transition: background 0.3s ease-in-out;
   }
 
