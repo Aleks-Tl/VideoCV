@@ -282,11 +282,30 @@ let data = [{
 }
 ];
 
+
+var bar_ctx = document.getElementById('graphCanvas').getContext('2d');
+
+var background_1 = bar_ctx.createLinearGradient(0, 0, 0, 350);
+background_1.addColorStop(0, '#4C00A6');
+background_1.addColorStop(1, '#7500FE');
+
+var background_2 = bar_ctx.createLinearGradient(0, 0, 0, 350);
+background_2.addColorStop(0, '#4C00A6');
+background_2.addColorStop(1, '#7500FE');
+
+var background_3 = bar_ctx.createLinearGradient(0, 0, 0, 350);
+background_3.addColorStop(0, '#00C08D');
+background_3.addColorStop(1, '#11E9B0');
+
+var background_4 = bar_ctx.createLinearGradient(0, 0, 0, 350);
+background_4.addColorStop(0, '#00C08D');
+background_4.addColorStop(1, '#11E9B0');
+
 const barcolor = [
-  '#7600FF',
-  '#7600FF',
-  '#00BF8D',
-  '#00BF8D',
+  background_1,
+  background_2,
+  background_3,
+  background_4,
 
 ];
 const graph = {
@@ -333,7 +352,6 @@ inpVal.on('change', function () {
   }
   ];
 
-  console.log(graph.barData);
   jQuery('#graphCanvas').remove();
   jQuery('.canvas_wrap').append('<canvas id="graphCanvas" width="350" height="350"></canvas>')
   generateBarGraph(graph);
